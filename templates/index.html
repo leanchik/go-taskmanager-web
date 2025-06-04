@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Task Manager</title>
+</head>
+<body>
+<h1>Task List</h1>
+<ul>
+    {{range .}}
+    <li>
+        {{.Title}}
+        {{if .Done}}✔️{{else}}
+        <small>({{ .CreatedAt.Format "02.01.2006 15:04" }})</small>
+        <form action="/done" method="POST" style="display:inline;">
+            <input type="hidden" name="id" value="{{.ID}}">
+            <button type="submit">Сделано</button>
+        </form>
+        <form action="/delete" method="POST" style="display:inline;">
+            <input type="hidden" name="id" value="{{.ID}}">
+            <button type="submit">Удалить</button>
+        </form>
+        <form action="/edit" method="POST" style="display:inline;">
+            <input type="hidden" name="id" value="{{.ID}}">
+            <input type="text" name="title" value="{{.Title}}">
+            <button type="submit">💾</button>
+        </form>
+        {{end}}
+    </li>
+    {{else}}
+    <li>Нет задач</li>
+    {{end}}
+</ul>
+
+<form action="/add" method="POST">
+    <input type="text" name="title" placeholder="Новая задача">
+    <button type="submit">Add</button>
+</form>
+</body>
+</html>
