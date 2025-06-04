@@ -49,15 +49,3 @@ export STORAGE=postgres # или json
 ```bash
 go run main.go tasks.go
 ```
-
-## Структура
-
-.
-├── main.go
-├── tasks.go
-├── go.mod
-├── templates/
-│   └── index.html
-└── storage/
-    ├── storage.go
-    └── postgres.go
