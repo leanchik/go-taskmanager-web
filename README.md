@@ -49,9 +49,3 @@ export STORAGE=postgres # или json
 ```bash
 go run main.go tasks.go
 ```
-## Автор:
-
-Контакт: 
-
-Tg: @gimmesomeleanbitch 
-Email: leanchik@proton.com
