@@ -51,4 +51,7 @@ go run main.go tasks.go
 ```
 ## Автор:
 
-Контакт: [tg: @gimmesomeleanbitch] или [leanchik@proton.com]
+Контакт: 
+
+Tg: @gimmesomeleanbitch 
+Email: leanchik@proton.com
